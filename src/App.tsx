@@ -1,24 +1,14 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import FetchData from "./query"
+import { createProduct } from "./helpers/objectHelpers"
 
 function App() {
+  const newProduct = createProduct(12, "d f g", "This is the title of the product, it will be truncated");
+  console.log(newProduct);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      learn react
+      <FetchData />
     </div>
   );
 }
