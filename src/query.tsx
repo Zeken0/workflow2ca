@@ -8,6 +8,7 @@ function FetchData() {
         axios.get("https://rickandmortyapi.com/api/character")
         .then(res => {
           console.log(res.data.results);
+//           You must sort your data using sortBy from lodash before setting it to characters
           setCharacters(res.data.results)
         })
     },[])
